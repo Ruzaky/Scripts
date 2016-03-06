@@ -1,6 +1,6 @@
 ﻿F3:: 
-#include SAMP.ahk
-SendInput,{f6}/wanted{enter}
+#include SAMP1.ahk
+SendChat("/wanted")
 ShowDialog("1", "{4682B4}Проверка розыска", "Введите id человека, чтобы проверить его на наличие розыска`n", "OK") 
 Input, varid, V, {enter} 
 SendInput, %varid%{enter}
@@ -17,10 +17,9 @@ FoundPos:= RegExMatch(A_LoopField, "(.*): (.)", SubPatt)
 if(FoundPos)==1
 {
 if(SubPatt1==varName)
-
-addMessageToChatWindow("{FF7F50}" SubPatt1 ".{F4A460}Уровень розыска: {FFFAFA}" SubPatt2)
-
+roz:=Subpatt2
 }
 } 
 }
+addchatmessage("{FF7F50}" varName " .{F4A460}Уровень розыска: {FFFAFA}" roz)
 return
