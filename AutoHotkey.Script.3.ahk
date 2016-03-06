@@ -21,5 +21,5 @@ roz:=Subpatt2
 }
 } 
 }
-addchatmessage("{FF7F50}" varName " .{F4A460}Уровень розыска: {FFFAFA}" roz)
+addchatmessage("{FF7F50}" varName ". {F4A460}Уровень розыска: {FFFAFA}" roz)
 return
